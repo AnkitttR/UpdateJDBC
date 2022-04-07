@@ -19,11 +19,10 @@ public class UpdateJDBC {
         BufferedReader br=new BufferedReader (new InputStreamReader(System.in));
         
             System.out.println("Enter new name: ");
-            
-            String name=br.readLine();
+            String name=br.readLine(); // Put name at ? in line 17
             
             System.out.println("Enter new city name: ");
-            String city=br.readLine();
+            String city=br.readLine(); // Put city at ? in line 17
             
             System.out.println("Enter the student id : ");
             int id=Integer.parseInt(br.readLine()); // Converting string from bufferedReader to integer
