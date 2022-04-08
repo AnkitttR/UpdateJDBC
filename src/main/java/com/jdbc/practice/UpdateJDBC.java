@@ -7,11 +7,22 @@ package com.jdbc.practice;
 import java.sql.*;
 import java.io.*;
 
+
 public class UpdateJDBC {
     public static void main(String[] args) {
         try{
         
-        Connection con=ConnectionProvider.getConnection();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            //creating a connection //Check port no in mysql cmd prompt : \s
+            String url="jdbc:mysql://localhost:3306/youtube1";
+            String username="root";
+            String password="4569";
+
+            // Driver manager connection banake con variable mein rakh dega.
+            Connection con=DriverManager.getConnection(url,username,password);
+            
+         
         
         String q ="update table1 set tName=? , tCity=? where tId=?";
         
